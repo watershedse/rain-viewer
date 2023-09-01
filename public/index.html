@@ -80,8 +80,8 @@
       'coordinates': [
         [-128, 54.9],
         [-104.7, 54.9],
-        [-106.7, 40.1],
-        [-126, 40.1]
+        [-106.7, 40.2],
+        [-126, 40.2]
       ]
     });
     map.addLayer({
@@ -102,13 +102,11 @@
 
     map.addLayer({
       'id': 'earthquakes-layer',
-      'type': 'circle',
+      'type': 'line',
       'source': 'earthquakes',
       'paint': {
-        'circle-radius': 4,
-        'circle-stroke-width': 2,
-        'circle-color': 'red',
-        'circle-stroke-color': 'white'
+        'line-color': '#000',
+        'line-width': 2,
       }
     });
   });
