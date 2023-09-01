@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       {imgs.map(img => {
         return <div style={{position: "relative", display: "inline-block", background: "black" }} key={img}>
-          <Basin style={{ position: "absolute", height: "75px", width: "250px", left: 80, top: 550 }} />
+          <Basin style={{ position: "absolute", height: "70px", width: "250px", left: 75, top: 525 }} />
           <img alt="Rainfall" src={img} style={{opacity: 0.7}} />
         </div>
       })}
