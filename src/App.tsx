@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       {imgs.map(img => {
-        return <div style={{position: "relative", display: "inline-block", background: "black" }}>
+        return <div style={{position: "relative", display: "inline-block", background: "black" }} key={img}>
           <div style={{ clipPath: "circle(100px at 25% 75%)", opacity: 0.6, background: "white", position: "absolute", left: 0, right: 0, top: 0, bottom: 0, zIndex: 9999 }}></div>
-          <img src={img} style={{opacity: 0.6}} />
+          <img alt="Rainfall" src={img} style={{opacity: 0.6}} />
         </div>
       })}
     </div>
