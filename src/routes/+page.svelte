@@ -54,7 +54,7 @@
 <Map
   accessToken="pk.eyJ1Ijoia3lsZWthcnBhY2siLCJhIjoiY2pvZXZmNTh4MDZ2dzN3bm1pbmk1dDlmZiJ9.Gapqs5j98RUsHOBl2rqOGQ"
   bind:this={mapComponent}
-  on:recentre={(e) => console.log(e.detail.center.lat, e.detail.center.lng)}
+  on:recentre={(e: any) => console.log(e.detail.center.lat, e.detail.center.lng)}
   on:ready={addLayers}
   options={{}}
 >
