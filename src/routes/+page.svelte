@@ -5,8 +5,8 @@
   let mapComponent: Map;
 
   onMount(() => {
-    mapComponent.setCenter([-122, 47]); // zoom is optional
-    mapComponent.setZoom(4);
+    mapComponent.setCenter([-121.789, 41.874]);
+    mapComponent.setZoom(5);
   });
 
   const addLayers = () => {
@@ -28,6 +28,22 @@
       paint: {
         "raster-fade-duration": 0,
         "raster-opacity": 0.75,
+      },
+    });
+
+    map.addSource("earthquakes", {
+      type: "geojson",
+      // Use a URL for the value for the `data` property.
+      data: "/basin.geojson",
+    });
+
+    map.addLayer({
+      id: "earthquakes-layer",
+      type: "line",
+      source: "earthquakes",
+      paint: {
+        "line-color": "#000",
+        "line-width": 2,
       },
     });
   };
