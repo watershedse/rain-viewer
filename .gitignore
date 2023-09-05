@@ -131,3 +131,4 @@ dist
 
 build/
 .svelte-kit/
+.DS_store
